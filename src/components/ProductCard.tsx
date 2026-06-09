@@ -10,8 +10,14 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="product-visual" aria-hidden="true">
         <span>1С</span>
       </div>
+      <div className="product-tags">
+        {product.tags.map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
       <h3>{product.name}</h3>
       <p>{product.text}</p>
+      <small>{product.delivery}</small>
       <div className="product-footer">
         <strong>{product.price}</strong>
         <a href="#contact">Заказать</a>

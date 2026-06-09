@@ -1,23 +1,22 @@
-import { CtaSection } from './components/CtaSection'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { IndustrySection } from './components/IndustrySection'
-import { ProductSection } from './components/ProductSection'
-import { ServiceSteps } from './components/ServiceSteps'
-import { BenefitsStrip } from './components/BenefitsStrip'
+import { CatalogPage } from './pages/CatalogPage'
+import { ContactsPage } from './pages/ContactsPage'
+import { LandingPage } from './pages/LandingPage'
+import { ServicesPage } from './pages/ServicesPage'
 import './App.css'
 
 function App() {
   return (
-    <main>
+    <BrowserRouter>
       <Header />
-      <Hero />
-      <BenefitsStrip />
-      <ProductSection />
-      <ServiceSteps />
-      <IndustrySection />
-      <CtaSection />
-    </main>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

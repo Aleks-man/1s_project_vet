@@ -6,12 +6,10 @@ export const company = {
 }
 
 export const navigation = [
-  { label: 'Программы 1С', href: '#catalog' },
-  { label: 'Сервисы 1С', href: '#services' },
-  { label: 'Сопровождение', href: '#services' },
-  { label: 'Оборудование', href: '#equipment' },
-  { label: 'Акции', href: '#catalog' },
-  { label: 'О компании', href: '#contact' },
+  { label: 'Главная', href: '/' },
+  { label: 'Каталог 1С', href: '/catalog' },
+  { label: 'Сервисы', href: '/services' },
+  { label: 'Контакты', href: '/contacts' },
 ]
 
 export const heroCategories = [

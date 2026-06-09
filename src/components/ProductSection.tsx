@@ -1,5 +1,4 @@
-import { products } from '../data/products'
-import { ProductCard } from './ProductCard'
+import { CatalogTabs } from './CatalogTabs'
 
 export function ProductSection() {
   return (
@@ -9,11 +8,7 @@ export function ProductSection() {
         <h2>Программы 1С, которые чаще всего выбирают компании</h2>
       </div>
 
-      <div className="product-grid">
-        {products.map((product) => (
-          <ProductCard product={product} key={product.name} />
-        ))}
-      </div>
+      <CatalogTabs />
     </section>
   )
 }

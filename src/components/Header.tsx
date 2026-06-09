@@ -5,7 +5,9 @@ export function Header() {
   return (
     <header className="site-header" aria-label="Главная навигация">
       <Link className="brand" to="/" aria-label={company.name}>
-        <span className="brand-mark">1С</span>
+        <span className="brand-mark" aria-hidden="true">
+          <img src="/logo-1c.svg" alt="" />
+        </span>
         <span>
           <strong>{company.name}</strong>
           <small>{company.tagline}</small>

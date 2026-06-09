@@ -8,7 +8,9 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <article className="product-card">
       <div className="product-visual" aria-hidden="true">
-        <span>1С</span>
+        <span>
+          <img src="/logo-1c.svg" alt="" />
+        </span>
       </div>
       <div className="product-tags">
         {product.tags.map((tag) => (

@@ -1,5 +1,5 @@
 export const company = {
-  name: 'Вектор учета',
+  name: 'Фан-Иван & Co',
   tagline: 'официальные решения для бизнеса',
   phone: '+7 999 000-00-00',
   phoneHref: 'tel:+79990000000',

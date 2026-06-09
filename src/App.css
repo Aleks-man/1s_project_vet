@@ -10,6 +10,7 @@
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
+  transition: transform 0.22s ease;
 }
 
 .brand,
@@ -70,8 +71,14 @@
   font-size: 14px;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .main-nav a:hover,
 .main-nav a.active,
+.mobile-nav a.active,
+.mobile-nav a:hover,
 .phone-link:hover,
 .product-footer a:hover {
   color: var(--green);
@@ -494,6 +501,58 @@ h3 {
 
   .main-nav {
     display: none;
+  }
+
+  .mobile-nav {
+    position: sticky;
+    top: 84px;
+    z-index: 9;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    margin: 10px 12px 0;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 12px 34px rgba(17, 24, 39, 0.1);
+    backdrop-filter: blur(18px);
+    transition:
+      box-shadow 0.22s ease,
+      transform 0.22s ease;
+  }
+
+  .mobile-nav--bottom {
+    position: fixed;
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    z-index: 20;
+    margin: 0;
+    box-shadow: 0 16px 50px rgba(17, 24, 39, 0.16);
+  }
+
+  .mobile-nav a {
+    display: grid;
+    min-height: 44px;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-nav a.active {
+    color: #111827;
+    background: var(--yellow);
+  }
+
+  body {
+    padding-bottom: 82px;
   }
 
   .hero-section,

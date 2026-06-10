@@ -13,7 +13,7 @@ export function ContactsPage() {
         </p>
       </section>
 
-      <section className="section visual-backdrop visual-backdrop--electronics" id="contact">
+      <section className="section contact-section-dark" id="contact">
         <article className="contact-card contact-card--single">
           <div>
             <span>Наш телефон</span>
@@ -26,6 +26,15 @@ export function ContactsPage() {
           <div>
             <span>Так же можете связаться с нами удобным для Вас способом</span>
             <ContactLinks />
+          </div>
+          <div className="contact-actions">
+            <a className="contact-action-button contact-action-button--call" href={company.phoneHref}>
+              <span>Позвонить</span>
+              <span className="contact-phone-icon" aria-hidden="true" />
+            </a>
+            <a className="contact-action-button contact-action-button--request" href="/contacts">
+              Заказать звонок
+            </a>
           </div>
         </article>
       </section>

@@ -7,7 +7,9 @@ export function Header() {
   const location = useLocation()
   const [isBottomNavVisible, setIsBottomNavVisible] = useState(false)
   const activeNavIndex = Math.max(
-    navigation.findIndex((item) => item.href === location.pathname),
+    navigation.findIndex((item) =>
+      item.href === '/' ? location.pathname === '/' : location.pathname.startsWith(item.href),
+    ),
     0,
   )
   const mobileNavStyle = { '--active-index': activeNavIndex } as CSSProperties
@@ -44,7 +46,7 @@ export function Header() {
 
         <nav className="main-nav">
           {navigation.map((item) => (
-            <NavLink to={item.href} key={item.label}>
+            <NavLink end={item.href === '/'} to={item.href} key={item.label}>
               {item.label}
             </NavLink>
           ))}
@@ -67,7 +69,7 @@ export function Header() {
         aria-label="Мобильная навигация"
       >
         {navigation.map((item) => (
-          <NavLink to={item.href} key={item.label}>
+          <NavLink end={item.href === '/'} to={item.href} key={item.label}>
             {item.label}
           </NavLink>
         ))}
@@ -79,7 +81,7 @@ export function Header() {
         aria-label="Закрепленная мобильная навигация"
       >
         {navigation.map((item) => (
-          <NavLink to={item.href} key={item.label}>
+          <NavLink end={item.href === '/'} to={item.href} key={item.label}>
             {item.label}
           </NavLink>
         ))}

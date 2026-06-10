@@ -1,5 +1,5 @@
+import { ContactLinks } from '../components/ContactLinks'
 import { company } from '../data/site'
-import { seoCities } from '../data/regions'
 
 export function ContactsPage() {
   return (
@@ -13,18 +13,20 @@ export function ContactsPage() {
         </p>
       </section>
 
-      <section className="section contact-layout visual-backdrop visual-backdrop--electronics" id="contact">
-        <article className="contact-card">
-          <span>Телефон</span>
-          <a href={company.phoneHref}>{company.phone}</a>
-        </article>
-        <article className="contact-card">
-          <span>Регион работы</span>
-          <strong>Крым и Севастополь</strong>
-        </article>
-        <article className="contact-card">
-          <span>География работы</span>
-          <strong>{seoCities.join(', ')}</strong>
+      <section className="section visual-backdrop visual-backdrop--electronics" id="contact">
+        <article className="contact-card contact-card--single">
+          <div>
+            <span>Наш телефон</span>
+            <a href={company.phoneHref}>{company.phone}</a>
+          </div>
+          <div>
+            <span>Наша почта</span>
+            <a href={company.emailHref}>{company.email}</a>
+          </div>
+          <div>
+            <span>Так же можете связаться с нами удобным для Вас способом</span>
+            <ContactLinks />
+          </div>
         </article>
       </section>
     </main>

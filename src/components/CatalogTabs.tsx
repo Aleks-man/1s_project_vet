@@ -41,7 +41,7 @@ export function CatalogTabs() {
 
       <div className="product-grid">
         {filteredProducts.map((product) => (
-          <ProductCard product={product} key={product.slug} />
+          <ProductCard key={product.slug} product={product} />
         ))}
       </div>
     </div>

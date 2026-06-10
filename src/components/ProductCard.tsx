@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Product } from '../data/products'
 
 type ProductCardProps = {
@@ -39,7 +40,14 @@ export function ProductCard({ product }: ProductCardProps) {
       <small>{product.delivery}</small>
       <div className="product-footer">
         <strong>{product.price}</strong>
-        <a href="#contact">Заказать</a>
+        <div className="product-card-actions">
+          <a className="product-order-link" href="#contact">
+            Заказать
+          </a>
+          <Link className="product-details-button" to={`/catalog/${product.slug}`}>
+            Подробнее...
+          </Link>
+        </div>
       </div>
     </article>
   )

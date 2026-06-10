@@ -10,7 +10,7 @@ const contactLinks = [
   {
     label: 'MAX',
     className: 'contact-icon contact-icon--max',
-    text: 'MAX',
+    icon: '/icons/max-messenger-sign-logo.svg',
   },
   {
     label: 'Почта',
@@ -23,7 +23,7 @@ export function ContactLinks() {
     <div className="contact-links" aria-label="Мессенджеры и почта">
       {contactLinks.map((item) => (
         <a className={item.className} href="#" key={item.label} aria-label={item.label} title={item.label}>
-          {'text' in item ? <span aria-hidden="true">{item.text}</span> : null}
+          {'icon' in item ? <img src={item.icon} alt="" aria-hidden="true" /> : null}
         </a>
       ))}
     </div>

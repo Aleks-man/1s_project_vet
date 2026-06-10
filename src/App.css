@@ -155,7 +155,7 @@
 }
 
 .contact-icon--max {
-  color: #005ff9;
+  background: #005ff9;
 }
 
 .contact-icon--mail {
@@ -163,14 +163,14 @@
   color: var(--green);
 }
 
-.contact-icon--max {
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 0;
-}
-
 .contact-icon--max::before {
   content: none;
+}
+
+.contact-icon--max img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .hero-section {
@@ -1042,8 +1042,9 @@ h3 {
   height: 22px;
 }
 
-.cta-messengers .contact-icon--max {
-  font-size: 10px;
+.cta-messengers .contact-icon--max img {
+  width: 24px;
+  height: 24px;
 }
 
 .cta-messengers .contact-icon:hover {

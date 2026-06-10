@@ -95,7 +95,7 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.7fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
-  padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px) 48px;
+  padding: clamp(44px, 7vw, 84px) clamp(20px, 5vw, 72px) 38px;
 }
 
 .hero-content {
@@ -226,30 +226,48 @@ h3 {
 .partner-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-block: 1px solid var(--border);
-  background: var(--surface);
+  gap: 12px;
+  padding: 14px clamp(20px, 5vw, 72px);
+  background:
+    linear-gradient(135deg, rgba(255, 214, 0, 0.14), transparent 38%),
+    rgba(255, 255, 255, 0.74);
 }
 
-.partner-strip div {
-  padding: 20px clamp(20px, 4vw, 44px);
-  border-right: 1px solid var(--border);
+.benefit-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(229, 231, 220, 0.82);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.82);
   color: var(--ink);
   font-weight: 700;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.05);
 }
 
-.partner-strip div:last-child {
-  border-right: 0;
+.benefit-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--yellow);
+  font-size: 24px;
+  line-height: 1;
 }
 
 .section {
-  padding: clamp(56px, 7vw, 92px) clamp(20px, 5vw, 72px);
+  padding: clamp(42px, 6vw, 72px) clamp(20px, 5vw, 72px);
 }
 
 .visual-backdrop {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  margin: 28px 0;
+  margin: 18px 0;
   background: transparent;
 }
 
@@ -301,7 +319,7 @@ h3 {
 }
 
 .visual-backdrop--hero {
-  margin: 0 0 28px;
+  margin: 0 0 18px;
 }
 
 .visual-backdrop--electronics::before {
@@ -316,7 +334,7 @@ h3 {
   display: grid;
   max-width: 760px;
   gap: 4px;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
 }
 
 .product-grid {
@@ -491,7 +509,7 @@ h3 {
   align-items: center;
   margin: 0;
   border-top: 1px solid rgba(229, 231, 220, 0.72);
-  padding: clamp(52px, 7vw, 88px) clamp(20px, 5vw, 72px);
+  padding: clamp(42px, 6vw, 70px) clamp(20px, 5vw, 72px);
   color: var(--ink);
 }
 
@@ -509,7 +527,7 @@ h3 {
   display: grid;
   width: 100%;
   gap: 14px;
-  padding: clamp(48px, 7vw, 86px) clamp(20px, 5vw, 72px) 24px;
+  padding: clamp(40px, 6vw, 68px) clamp(20px, 5vw, 72px) 20px;
 }
 
 .page-hero > * {
@@ -646,11 +664,11 @@ h3 {
 
 @media (max-width: 700px) {
   .visual-backdrop {
-    margin: 34px 0;
+    margin: 16px 0;
   }
 
   .visual-backdrop--hero {
-    margin: 0 0 34px;
+    margin: 0 0 16px;
   }
 
   .site-header {
@@ -667,7 +685,7 @@ h3 {
   }
 
   .hero-section {
-    padding-top: 40px;
+    padding-top: 34px;
   }
 
   .hero-copy {
@@ -696,7 +714,6 @@ h3 {
   }
 
   .partner-strip div {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
+    border-right: 1px solid rgba(229, 231, 220, 0.82);
   }
 }

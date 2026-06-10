@@ -31,7 +31,7 @@ const services = [
 export function ServicesPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero visual-backdrop visual-backdrop--electronics">
         <p className="eyebrow">Сервисы и сопровождение</p>
         <h1>Помогаем внедрить 1С и поддерживать учет в рабочем состоянии</h1>
         <p>
@@ -43,7 +43,7 @@ export function ServicesPage() {
 
       <ServiceSteps />
 
-      <section className="section">
+      <section className="section visual-backdrop visual-backdrop--mixed">
         <div className="section-heading">
           <p className="eyebrow">Что можно оформить</p>
           <h2>Услуги для запуска и стабильной работы 1С</h2>

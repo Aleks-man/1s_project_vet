@@ -4,7 +4,7 @@ import { seoCities } from '../data/regions'
 export function ContactsPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero visual-backdrop visual-backdrop--mixed">
         <p className="eyebrow">Контакты</p>
         <h1>Консультация по покупке, внедрению и сопровождению 1С</h1>
         <p>
@@ -13,7 +13,7 @@ export function ContactsPage() {
         </p>
       </section>
 
-      <section className="section contact-layout" id="contact">
+      <section className="section contact-layout visual-backdrop visual-backdrop--electronics" id="contact">
         <article className="contact-card">
           <span>Телефон</span>
           <a href={company.phoneHref}>{company.phone}</a>

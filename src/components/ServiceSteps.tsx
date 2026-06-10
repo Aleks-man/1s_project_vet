@@ -2,7 +2,7 @@ import { serviceSteps } from '../data/site'
 
 export function ServiceSteps() {
   return (
-    <section className="section split-section" id="services">
+    <section className="section split-section visual-backdrop visual-backdrop--electronics" id="services">
       <div>
         <p className="eyebrow">Автоматизация под ключ</p>
         <h2>Не просто продаем коробку, а доводим учет до рабочего процесса</h2>

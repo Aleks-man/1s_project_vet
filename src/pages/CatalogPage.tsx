@@ -4,7 +4,7 @@ import { CtaSection } from '../components/CtaSection'
 export function CatalogPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero visual-backdrop visual-backdrop--grocery">
         <p className="eyebrow">Каталог программ 1С</p>
         <h1>Лицензии 1С для учета, торговли, зарплаты и управления</h1>
         <p>
@@ -14,7 +14,7 @@ export function CatalogPage() {
         </p>
       </section>
 
-      <section className="section">
+      <section className="section visual-backdrop visual-backdrop--electronics">
         <CatalogTabs />
       </section>
 

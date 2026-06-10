@@ -2,7 +2,7 @@ import { heroCategories } from '../data/site'
 
 export function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section visual-backdrop visual-backdrop--hero">
       <div className="hero-content">
         <p className="eyebrow">Лицензии, внедрение и сопровождение 1С в Крыму</p>
         <h1>1С в Симферополе и Севастополе для учета и автоматизации бизнеса</h1>

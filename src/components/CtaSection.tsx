@@ -2,7 +2,7 @@ import { company } from '../data/site'
 
 export function CtaSection() {
   return (
-    <section className="cta-section" id="contact">
+    <section className="cta-section visual-backdrop visual-backdrop--mixed" id="contact">
       <div>
         <p className="eyebrow">Консультация специалиста</p>
         <h2>Есть вопрос по 1С? Обсудим задачу и предложим решение</h2>

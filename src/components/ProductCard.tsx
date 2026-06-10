@@ -7,10 +7,27 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <article className="product-card">
-      <div className="product-visual" aria-hidden="true">
-        <span>
-          <img src="/logo-1c.svg" alt="" />
-        </span>
+      <div className={`product-visual ${product.image ? 'product-visual--image' : 'product-visual--placeholder'}`}>
+        {product.image ? (
+          <img className="product-image" src={product.image} alt={product.imageAlt ?? product.name} loading="lazy" />
+        ) : (
+          <div className="product-placeholder" aria-hidden="true">
+            <span className="product-placeholder-logo">
+              <img src="/logo-1c.svg" alt="" />
+            </span>
+            <span className="product-placeholder-category">
+              {product.category === 'accounting'
+                ? 'Учет'
+                : product.category === 'trade'
+                  ? 'Торговля'
+                  : product.category === 'hr'
+                    ? 'Кадры'
+                    : product.category === 'workflow'
+                      ? 'Документы'
+                      : 'Бизнес'}
+            </span>
+          </div>
+        )}
       </div>
       <div className="product-tags">
         {product.tags.map((tag) => (

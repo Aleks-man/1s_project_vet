@@ -8,6 +8,8 @@ export type Product = {
   delivery: string
   tags: string[]
   text: string
+  image?: string
+  imageAlt?: string
 }
 
 export const productCategories: Array<{
@@ -52,6 +54,8 @@ export const products: Product[] = [
     slug: '1c-buhgalteriya-prof',
     name: '1С:Бухгалтерия 8 ПРОФ',
     category: 'accounting',
+    image: '/products/1c-buhgalteriya-prof.png',
+    imageAlt: 'Коробка 1С:Бухгалтерия 8 ПРОФ',
     price: '23 000 ₽',
     delivery: 'Электронная поставка',
     tags: ['Популярное', 'Для ООО и ИП'],
@@ -61,6 +65,8 @@ export const products: Product[] = [
     slug: '1c-buhgalteriya-bazovaya',
     name: '1С:Бухгалтерия 8 Базовая',
     category: 'accounting',
+    image: '/products/1c-buhgalteriya-bazovaya.png',
+    imageAlt: 'Коробка 1С:Бухгалтерия 8 Базовая',
     price: 'от 6 000 ₽',
     delivery: 'Базовая лицензия',
     tags: ['Для малого бизнеса'],
@@ -70,6 +76,8 @@ export const products: Product[] = [
     slug: '1c-roznica',
     name: '1С:Розница 8',
     category: 'trade',
+    image: '/products/1c-roznica.png',
+    imageAlt: 'Коробка 1С:Розница 8',
     price: 'от 16 200 ₽',
     delivery: 'Коробочная или электронная',
     tags: ['Для магазина', 'Кассы'],
@@ -79,6 +87,8 @@ export const products: Product[] = [
     slug: '1c-upravlenie-torgovley',
     name: '1С:Управление торговлей',
     category: 'trade',
+    image: '/products/1c-upravlenie-torgovley.png',
+    imageAlt: 'Коробка 1С:Управление торговлей',
     price: '39 700 ₽',
     delivery: 'ПРОФ-лицензия',
     tags: ['Опт и розница'],
@@ -88,6 +98,8 @@ export const products: Product[] = [
     slug: '1c-unf',
     name: '1С:Управление нашей фирмой',
     category: 'management',
+    image: '/products/1c-unf.png',
+    imageAlt: 'Коробка 1С:Управление нашей фирмой',
     price: '30 600 ₽',
     delivery: 'Электронная поставка',
     tags: ['CRM', 'Производство'],
@@ -97,6 +109,8 @@ export const products: Product[] = [
     slug: '1c-kompleksnaya-avtomatizaciya',
     name: '1С:Комплексная автоматизация',
     category: 'management',
+    image: '/products/1c-kompleksnaya-avtomatizaciya.png',
+    imageAlt: 'Коробка 1С:Комплексная автоматизация',
     price: 'от 95 000 ₽',
     delivery: 'Проектное внедрение',
     tags: ['Для компании'],
@@ -106,6 +120,8 @@ export const products: Product[] = [
     slug: '1c-zup',
     name: '1С:Зарплата и управление персоналом',
     category: 'hr',
+    image: '/products/1c-zup.png',
+    imageAlt: 'Коробка 1С:Зарплата и управление персоналом',
     price: 'от 39 700 ₽',
     delivery: 'ПРОФ-лицензия',
     tags: ['Кадры', 'Отчетность'],
@@ -115,6 +131,8 @@ export const products: Product[] = [
     slug: '1c-dokumentooborot',
     name: '1С:Документооборот',
     category: 'workflow',
+    image: '/products/1c-dokumentooborot.png',
+    imageAlt: 'Коробка 1С:Документооборот',
     price: 'от 48 600 ₽',
     delivery: 'Серверная или облачная',
     tags: ['Согласования', 'Архив'],

@@ -493,6 +493,8 @@ h3 {
   display: grid;
   min-height: 330px;
   padding: 18px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.05);
 }
 
 .product-card small {
@@ -524,31 +526,93 @@ h3 {
 }
 
 .product-visual {
+  position: relative;
   display: grid;
-  height: 116px;
+  min-height: 166px;
   margin-bottom: 18px;
   place-items: center;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(36, 161, 72, 0.16), transparent),
-    var(--surface);
+  overflow: hidden;
 }
 
-.product-visual span {
+.product-visual--image {
+  min-height: 150px;
+  margin: -2px 0 14px;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.product-visual--placeholder {
+  background:
+    linear-gradient(135deg, rgba(255, 214, 0, 0.22), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(246, 247, 242, 0.88)),
+    #f8f7ef;
+}
+
+.product-visual--placeholder::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(22, 128, 58, 0.08);
+}
+
+.product-visual--placeholder::after {
+  content: '';
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  width: 74px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--yellow), rgba(218, 41, 28, 0.72));
+}
+
+.product-image {
+  position: relative;
+  z-index: 1;
+  width: min(168px, 88%);
+  max-height: 148px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(17, 24, 39, 0.13));
+}
+
+.product-placeholder {
+  position: relative;
+  z-index: 1;
   display: grid;
-  width: 62px;
-  height: 62px;
+  justify-items: center;
+  gap: 10px;
+}
+
+.product-placeholder-logo {
+  display: grid;
+  width: 66px;
+  height: 66px;
   place-items: center;
   border-radius: 50%;
-  background: transparent;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.08);
   overflow: hidden;
-  font-weight: 900;
 }
 
-.product-visual img {
+.product-placeholder-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.product-placeholder-category {
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: var(--green);
+  background: rgba(22, 128, 58, 0.1);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .product-footer {

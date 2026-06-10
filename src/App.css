@@ -126,7 +126,16 @@
   transition:
     border-color 0.2s ease,
     color 0.2s ease,
-    transform 0.2s ease;
+  transform 0.2s ease;
+}
+
+.contact-icon::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  -webkit-mask: var(--contact-icon) center / contain no-repeat;
+  mask: var(--contact-icon) center / contain no-repeat;
 }
 
 .contact-icon:hover {
@@ -136,10 +145,12 @@
 }
 
 .contact-icon--telegram {
+  --contact-icon: url('/icons/telegram.svg');
   color: #229ed9;
 }
 
 .contact-icon--whatsapp {
+  --contact-icon: url('/icons/whatsapp.svg');
   color: #25d366;
 }
 
@@ -148,19 +159,18 @@
 }
 
 .contact-icon--mail {
+  --contact-icon: url('/icons/mail.svg');
   color: var(--green);
-}
-
-.contact-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
 }
 
 .contact-icon--max {
   font-size: 9px;
   font-weight: 900;
   letter-spacing: 0;
+}
+
+.contact-icon--max::before {
+  content: none;
 }
 
 .hero-section {
@@ -632,6 +642,12 @@ h3 {
   background: var(--green);
 }
 
+.cta-phone-icon {
+  width: 19px;
+  height: 19px;
+  fill: rgba(255, 255, 255, 0.72);
+}
+
 .cta-call-button:hover {
   color: #fff;
 }
@@ -672,7 +688,7 @@ h3 {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.cta-messengers .contact-icon svg {
+.cta-messengers .contact-icon::before {
   width: 22px;
   height: 22px;
 }

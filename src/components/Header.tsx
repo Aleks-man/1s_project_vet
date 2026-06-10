@@ -50,9 +50,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a className="phone-link" href={company.phoneHref}>
-          {company.phone}
-        </a>
+        <div className="header-contact">
+          <a className="phone-link" href={company.phoneHref}>
+            {company.phone}
+          </a>
+          <a className="header-mail" href={company.emailHref}>
+            {company.email}
+          </a>
+        </div>
       </header>
 
       <nav

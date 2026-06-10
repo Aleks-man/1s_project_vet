@@ -1,4 +1,5 @@
 import { company } from '../data/site'
+import { ContactLinks } from './ContactLinks'
 
 export function CtaSection() {
   return (
@@ -19,6 +20,10 @@ export function CtaSection() {
         <a className="button cta-request-button" href="/contacts">
           Заказать звонок
         </a>
+        <div className="cta-messengers">
+          <span>Связаться с нами</span>
+          <ContactLinks />
+        </div>
       </div>
     </section>
   )

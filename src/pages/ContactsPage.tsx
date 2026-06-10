@@ -20,7 +20,7 @@ export function ContactsPage() {
         </article>
         <article className="contact-card">
           <span>Регион работы</span>
-          <strong>Симферополь, Севастополь и Крым</strong>
+          <strong>Крым и Севастополь</strong>
         </article>
         <article className="contact-card">
           <span>География работы</span>

@@ -15,6 +15,7 @@
 
 .brand,
 .phone-link,
+.contact-icon,
 .main-nav a,
 .button,
 .category-grid a,
@@ -85,9 +86,81 @@
 }
 
 .phone-link {
-  justify-self: end;
   color: var(--ink);
   font-weight: 700;
+}
+
+.header-contact {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  line-height: 1.25;
+}
+
+.header-mail {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header-mail:hover {
+  color: var(--green);
+}
+
+.contact-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-icon {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-icon:hover {
+  border-color: var(--green);
+  color: var(--green);
+  transform: translateY(-1px);
+}
+
+.contact-icon--telegram {
+  color: #229ed9;
+}
+
+.contact-icon--whatsapp {
+  color: #25d366;
+}
+
+.contact-icon--max {
+  color: #005ff9;
+}
+
+.contact-icon--mail {
+  color: var(--green);
+}
+
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.contact-icon--max {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0;
 }
 
 .hero-section {
@@ -524,19 +597,6 @@ h3 {
   gap: clamp(24px, 5vw, 56px);
   align-items: center;
   margin: 0;
-  border-top: 4px solid transparent;
-  border-image:
-    linear-gradient(
-      90deg,
-      transparent 4%,
-      rgba(255, 214, 0, 0.28) 20%,
-      rgba(255, 214, 0, 0.95) 46%,
-      rgba(218, 41, 28, 0.8) 50%,
-      rgba(255, 214, 0, 0.95) 54%,
-      rgba(255, 214, 0, 0.28) 80%,
-      transparent 96%
-    )
-    1;
   padding: clamp(42px, 6vw, 70px) clamp(20px, 5vw, 72px);
   color: #fff;
   background:
@@ -585,6 +645,45 @@ h3 {
 .cta-request-button:hover {
   color: #fff;
   border-color: rgba(255, 214, 0, 0.72);
+}
+
+.cta-messengers {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.cta-messengers > span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cta-messengers .contact-links {
+  gap: 8px;
+}
+
+.cta-messengers .contact-icon {
+  width: 40px;
+  height: 40px;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-messengers .contact-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cta-messengers .contact-icon--max {
+  font-size: 10px;
+}
+
+.cta-messengers .contact-icon:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .page-hero {
@@ -777,8 +876,28 @@ h3 {
     font-size: 14px;
   }
 
+  .phone-link::before {
+    content: '📞';
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+  }
+
   .hero-section {
     padding-top: 34px;
+  }
+
+  .header-contact {
+    gap: 3px;
+  }
+
+  .header-mail {
+    font-size: 12px;
+  }
+
+  .phone-link::before {
+    content: none;
+    display: none;
   }
 
   .hero-copy {

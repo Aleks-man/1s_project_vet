@@ -28,7 +28,7 @@ export function ContactsPage({ onCallbackRequest }: ContactsPageProps) {
             <a href={company.emailHref}>{company.email}</a>
           </div>
           <div>
-            <span>Так же можете связаться с нами удобным для Вас способом</span>
+            <span>Другие способы связи</span>
             <ContactLinks />
           </div>
           <div className="contact-actions">

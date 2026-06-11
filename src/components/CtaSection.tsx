@@ -1,9 +1,9 @@
-import { company } from '../data/site'
-import { ContactLinks } from './ContactLinks'
+import { company } from "../data/site";
+import { ContactLinks } from "./ContactLinks";
 
 type CtaSectionProps = {
-  onCallbackRequest: () => void
-}
+  onCallbackRequest: () => void;
+};
 
 export function CtaSection({ onCallbackRequest }: CtaSectionProps) {
   return (
@@ -21,14 +21,18 @@ export function CtaSection({ onCallbackRequest }: CtaSectionProps) {
           <span>Позвонить</span>
           <span className="cta-phone-icon" aria-hidden="true" />
         </a>
-        <button className="button cta-request-button" onClick={onCallbackRequest} type="button">
+        <button
+          className="button cta-request-button"
+          onClick={onCallbackRequest}
+          type="button"
+        >
           Заказать звонок
         </button>
         <div className="cta-messengers">
-          <span>Связаться с нами</span>
+          <span>Другие способы связи</span>
           <ContactLinks />
         </div>
       </div>
     </section>
-  )
+  );
 }

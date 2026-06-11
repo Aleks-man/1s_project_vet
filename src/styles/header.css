@@ -111,51 +111,29 @@
 .contact-links {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
 }
 
 .contact-icon {
-  display: inline-grid;
-  margin: 5px;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.72);
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
   transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
     transform 0.2s ease;
 }
 
-.contact-icon::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: currentColor;
-  -webkit-mask: var(--contact-icon) center / contain no-repeat;
-  mask: var(--contact-icon) center / contain no-repeat;
-}
-
 .contact-icon:hover {
-  transform: translateY(-1px);
-}
-
-.contact-icon--max::before,
-.contact-icon--telegram::before,
-.contact-icon--whatsapp::before,
-.contact-icon--mail::before {
-  content: none;
+  transform: scale(1.12);
 }
 
 .contact-icon--max img,
 .contact-icon--mail img,
 .contact-icon--telegram img,
 .contact-icon--whatsapp img {
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 

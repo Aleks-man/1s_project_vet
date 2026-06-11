@@ -69,17 +69,13 @@
 
 .contact-card .contact-links {
   justify-content: flex-start;
-  margin-top: 6px;
+  margin-top: 8px;
+  gap: 20px;
 }
 
 .contact-card .contact-icon {
-  width: 46px;
-  height: 46px;
-}
-
-.contact-card .contact-icon::before {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
 }
 
 .contact-section-dark {
@@ -105,14 +101,6 @@
   color: #fff;
 }
 
-.contact-section-dark .contact-card .contact-icon {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.contact-section-dark .contact-card .contact-icon:hover {
-  background: rgba(255, 214, 0, 0.16);
-}
-
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
@@ -134,6 +122,20 @@
   font: inherit;
   font-weight: 900;
   text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-card .contact-action-button span {
+  display: inline-block;
+  margin-bottom: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: none;
 }
 
 .contact-action-button--call {
@@ -150,7 +152,7 @@
 .contact-phone-icon {
   width: 19px;
   height: 19px;
-  background: rgba(255, 255, 255, 0.78);
+  background: #fff;
   -webkit-mask: url("/icons/phone.svg") center / contain no-repeat;
   mask: url("/icons/phone.svg") center / contain no-repeat;
 }
@@ -159,6 +161,7 @@
 .contact-action-button--call:focus-visible {
   color: #fff;
   background: #16803a;
+  transform: translateY(-1px);
 }
 
 .contact-action-button--request:hover,
@@ -166,6 +169,7 @@
   border-color: rgba(255, 214, 0, 0.72);
   color: #fff;
   background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
 }
 
 .dialog-open {
@@ -325,4 +329,3 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-

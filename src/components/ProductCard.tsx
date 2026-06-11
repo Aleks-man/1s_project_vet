@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import type { KeyboardEvent } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import type { Product } from '../data/products'
 
 type ProductCardProps = {
@@ -6,8 +7,30 @@ type ProductCardProps = {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const navigate = useNavigate()
+  const productUrl = `/catalog/${product.slug}`
+
+  const openProductPage = () => {
+    navigate(productUrl)
+  }
+
+  const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.target !== event.currentTarget || event.key !== 'Enter') {
+      return
+    }
+
+    openProductPage()
+  }
+
   return (
-    <article className="product-card">
+    <article
+      aria-label={`Подробнее о ${product.name}`}
+      className="product-card"
+      onClick={openProductPage}
+      onKeyDown={handleCardKeyDown}
+      role="link"
+      tabIndex={0}
+    >
       <div className={`product-visual ${product.image ? 'product-visual--image' : 'product-visual--placeholder'}`}>
         {product.image ? (
           <img className="product-image" src={product.image} alt={product.imageAlt ?? product.name} loading="lazy" />
@@ -41,10 +64,10 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="product-footer">
         <strong>{product.price}</strong>
         <div className="product-card-actions">
-          <a className="product-order-link" href="#contact">
+          <a className="product-order-link" href="#contact" onClick={(event) => event.stopPropagation()}>
             Заказать
           </a>
-          <Link className="product-details-button" to={`/catalog/${product.slug}`}>
+          <Link className="product-details-button" to={productUrl}>
             Подробнее...
           </Link>
         </div>

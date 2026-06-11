@@ -38,6 +38,13 @@
   background: var(--green);
 }
 
+.cta-call-button,
+.cta-request-button {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .cta-phone-icon {
   width: 19px;
   height: 19px;

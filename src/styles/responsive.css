@@ -228,6 +228,13 @@
     width: 100%;
   }
 
+  .cta-call-button,
+  .cta-request-button,
+  .contact-action-button,
+  .contact-card .contact-action-button {
+    font-size: 17px;
+  }
+
   .callback-modal-backdrop {
     padding: 12px;
   }

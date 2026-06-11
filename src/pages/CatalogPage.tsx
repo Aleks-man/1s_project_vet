@@ -1,7 +1,11 @@
 import { CatalogTabs } from '../components/CatalogTabs'
 import { CtaSection } from '../components/CtaSection'
 
-export function CatalogPage() {
+type CatalogPageProps = {
+  onCallbackRequest: () => void
+}
+
+export function CatalogPage({ onCallbackRequest }: CatalogPageProps) {
   return (
     <main>
       <section className="page-hero visual-backdrop visual-backdrop--grocery">
@@ -19,7 +23,7 @@ export function CatalogPage() {
         <CatalogTabs />
       </section>
 
-      <CtaSection />
+      <CtaSection onCallbackRequest={onCallbackRequest} />
     </main>
   )
 }

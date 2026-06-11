@@ -1,6 +1,10 @@
 import { heroCategories } from '../data/site'
 
-export function Hero() {
+type HeroProps = {
+  onCallbackRequest: () => void
+}
+
+export function Hero({ onCallbackRequest }: HeroProps) {
   return (
     <section className="hero-section visual-backdrop visual-backdrop--hero">
       <div className="hero-content">
@@ -17,9 +21,9 @@ export function Hero() {
           <a className="button button-primary" href="#catalog">
             Подобрать 1С
           </a>
-          <a className="button button-secondary" href="#contact">
+          <button className="button button-secondary" onClick={onCallbackRequest} type="button">
             Заказать звонок
-          </a>
+          </button>
         </div>
       </div>
 

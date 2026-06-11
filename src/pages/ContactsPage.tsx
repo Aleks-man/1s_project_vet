@@ -1,7 +1,11 @@
 import { ContactLinks } from '../components/ContactLinks'
 import { company } from '../data/site'
 
-export function ContactsPage() {
+type ContactsPageProps = {
+  onCallbackRequest: () => void
+}
+
+export function ContactsPage({ onCallbackRequest }: ContactsPageProps) {
   return (
     <main>
       <section className="page-hero visual-backdrop visual-backdrop--mixed">
@@ -32,9 +36,9 @@ export function ContactsPage() {
               <span>Позвонить</span>
               <span className="contact-phone-icon" aria-hidden="true" />
             </a>
-            <a className="contact-action-button contact-action-button--request" href="/contacts">
+            <button className="contact-action-button contact-action-button--request" onClick={onCallbackRequest} type="button">
               Заказать звонок
-            </a>
+            </button>
           </div>
         </article>
       </section>

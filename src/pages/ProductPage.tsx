@@ -3,7 +3,11 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { CtaSection } from '../components/CtaSection'
 import { products } from '../data/products'
 
-export function ProductPage() {
+type ProductPageProps = {
+  onCallbackRequest: () => void
+}
+
+export function ProductPage({ onCallbackRequest }: ProductPageProps) {
   const { slug } = useParams()
   const product = products.find((item) => item.slug === slug)
 
@@ -165,7 +169,7 @@ export function ProductPage() {
         </Link>
       </section>
 
-      <CtaSection />
+      <CtaSection onCallbackRequest={onCallbackRequest} />
     </main>
   )
 }

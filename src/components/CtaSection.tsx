@@ -1,7 +1,11 @@
 import { company } from '../data/site'
 import { ContactLinks } from './ContactLinks'
 
-export function CtaSection() {
+type CtaSectionProps = {
+  onCallbackRequest: () => void
+}
+
+export function CtaSection({ onCallbackRequest }: CtaSectionProps) {
   return (
     <section className="cta-section" id="contact">
       <div>
@@ -17,9 +21,9 @@ export function CtaSection() {
           <span>Позвонить</span>
           <span className="cta-phone-icon" aria-hidden="true" />
         </a>
-        <a className="button cta-request-button" href="/contacts">
+        <button className="button cta-request-button" onClick={onCallbackRequest} type="button">
           Заказать звонок
-        </a>
+        </button>
         <div className="cta-messengers">
           <span>Связаться с нами</span>
           <ContactLinks />

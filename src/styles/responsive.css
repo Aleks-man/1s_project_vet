@@ -194,6 +194,36 @@
     width: 100%;
   }
 
+  .callback-modal-backdrop {
+    padding: 12px;
+  }
+
+  .callback-modal {
+    width: 100%;
+    max-height: calc(100svh - 24px);
+    gap: 14px;
+    padding: 20px 16px 16px;
+  }
+
+  .callback-modal h2 {
+    padding-right: 28px;
+    font-size: 22px;
+    line-height: 1.14;
+  }
+
+  .callback-form {
+    gap: 10px;
+  }
+
+  .callback-form input,
+  .callback-form textarea {
+    padding: 10px 12px;
+  }
+
+  .callback-modal-actions {
+    grid-template-columns: 1fr;
+  }
+
   .product-page-media {
     min-height: 240px;
   }

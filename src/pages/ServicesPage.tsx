@@ -32,7 +32,11 @@ const services = [
   },
 ]
 
-export function ServicesPage() {
+type ServicesPageProps = {
+  onCallbackRequest: () => void
+}
+
+export function ServicesPage({ onCallbackRequest }: ServicesPageProps) {
   return (
     <main>
       <section className="page-hero visual-backdrop visual-backdrop--electronics">
@@ -62,7 +66,7 @@ export function ServicesPage() {
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection onCallbackRequest={onCallbackRequest} />
     </main>
   )
 }

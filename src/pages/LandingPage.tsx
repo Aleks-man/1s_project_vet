@@ -5,15 +5,19 @@ import { IndustrySection } from '../components/IndustrySection'
 import { ProductSection } from '../components/ProductSection'
 import { ServiceSteps } from '../components/ServiceSteps'
 
-export function LandingPage() {
+type LandingPageProps = {
+  onCallbackRequest: () => void
+}
+
+export function LandingPage({ onCallbackRequest }: LandingPageProps) {
   return (
     <main>
-      <Hero />
+      <Hero onCallbackRequest={onCallbackRequest} />
       <BenefitsStrip />
       <ProductSection />
       <ServiceSteps />
       <IndustrySection />
-      <CtaSection />
+      <CtaSection onCallbackRequest={onCallbackRequest} />
     </main>
   )
 }

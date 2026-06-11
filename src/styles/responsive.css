@@ -209,7 +209,10 @@
 
   .tab-button {
     width: 100%;
+    min-height: 48px;
     padding: 0 10px;
+    font-size: 17px;
+    line-height: 1.2;
     text-align: center;
   }
 
@@ -221,6 +224,11 @@
 
   .button {
     width: 100%;
+  }
+
+  .hero-actions .button {
+    font-size: 17px;
+    line-height: 1.2;
   }
 
   .contact-action-button {
@@ -290,7 +298,7 @@
   .product-grid,
   .partner-strip,
   .industry-grid,
-    .feature-grid,
+  .feature-grid,
   .product-info-grid,
   .related-product-grid,
   .cta-section {

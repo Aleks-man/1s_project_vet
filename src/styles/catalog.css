@@ -51,8 +51,7 @@
   font-size: 20px;
 }
 
-.product-card,
-.service-list article {
+.product-card {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #fff;
@@ -98,9 +97,7 @@
   font-weight: 800;
 }
 
-.product-card p,
-.service-list p,
-.cta-section p {
+.product-card p {
   color: var(--muted);
 }
 

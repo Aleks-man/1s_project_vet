@@ -40,7 +40,7 @@ export function ContactLinks() {
           target={item.href.startsWith('http') ? '_blank' : undefined}
           title={item.label}
         >
-          {'icon' in item ? <img src={item.icon} alt="" aria-hidden="true" /> : null}
+          <img src={item.icon} alt="" aria-hidden="true" />
         </a>
       ))}
     </div>

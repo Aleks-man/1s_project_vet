@@ -67,7 +67,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <a className="product-order-link" href="#contact" onClick={(event) => event.stopPropagation()}>
             Заказать
           </a>
-          <Link className="product-details-button" to={productUrl}>
+          <Link className="product-details-button" onClick={(event) => event.stopPropagation()} to={productUrl}>
             Подробнее...
           </Link>
         </div>

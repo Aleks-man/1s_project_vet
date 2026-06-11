@@ -222,6 +222,16 @@
     flex-direction: column;
   }
 
+  .cta-section > div:first-child {
+    text-align: center;
+  }
+
+  .cta-section h2,
+  .cta-section p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .button {
     width: 100%;
   }
@@ -233,6 +243,14 @@
 
   .contact-action-button {
     width: 100%;
+  }
+
+  .contact-card--single > div:not(.contact-actions) {
+    text-align: center;
+  }
+
+  .contact-card--single .contact-links {
+    justify-content: center;
   }
 
   .cta-call-button,

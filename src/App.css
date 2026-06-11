@@ -116,6 +116,7 @@
 
 .contact-icon {
   display: inline-grid;
+  margin: 5px;
   width: 34px;
   height: 34px;
   place-items: center;
@@ -126,11 +127,11 @@
   transition:
     border-color 0.2s ease,
     color 0.2s ease,
-  transform 0.2s ease;
+    transform 0.2s ease;
 }
 
 .contact-icon::before {
-  content: '';
+  content: "";
   width: 18px;
   height: 18px;
   background: currentColor;
@@ -139,37 +140,22 @@
 }
 
 .contact-icon:hover {
-  border-color: var(--green);
-  color: var(--green);
   transform: translateY(-1px);
 }
 
-.contact-icon--telegram {
-  --contact-icon: url('/icons/telegram.svg');
-  color: #229ed9;
-}
-
-.contact-icon--whatsapp {
-  --contact-icon: url('/icons/whatsapp.svg');
-  color: #25d366;
-}
-
-.contact-icon--max {
-  background: #005ff9;
-}
-
-.contact-icon--mail {
-  --contact-icon: url('/icons/mail.svg');
-  color: var(--green);
-}
-
-.contact-icon--max::before {
+.contact-icon--max::before,
+.contact-icon--telegram::before,
+.contact-icon--whatsapp::before,
+.contact-icon--mail::before {
   content: none;
 }
 
-.contact-icon--max img {
-  width: 20px;
-  height: 20px;
+.contact-icon--max img,
+.contact-icon--mail img,
+.contact-icon--telegram img,
+.contact-icon--whatsapp img {
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
@@ -271,8 +257,7 @@ h3 {
   border-radius: 8px;
   padding: 24px;
   background:
-    linear-gradient(145deg, rgba(255, 214, 0, 0.16), transparent 42%),
-    #fff;
+    linear-gradient(145deg, rgba(255, 214, 0, 0.16), transparent 42%), #fff;
   box-shadow: 0 24px 70px rgba(17, 24, 39, 0.08);
 }
 
@@ -356,8 +341,7 @@ h3 {
 
 .visual-backdrop:not(.hero-section):not(.page-hero) {
   border-top: 3px solid transparent;
-  border-image:
-    linear-gradient(
+  border-image: linear-gradient(
       90deg,
       transparent 5%,
       rgba(255, 214, 0, 0.22) 22%,
@@ -371,7 +355,7 @@ h3 {
 }
 
 .visual-backdrop::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -383,7 +367,7 @@ h3 {
 }
 
 .visual-backdrop::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -410,11 +394,11 @@ h3 {
 }
 
 .visual-backdrop--grocery::before {
-  background-image: url('/retail-grocery-bg.png');
+  background-image: url("/retail-grocery-bg.png");
 }
 
 .visual-backdrop--hero::before {
-  background-image: url('/hero-commerce-bg.png');
+  background-image: url("/hero-commerce-bg.png");
 }
 
 .visual-backdrop--hero {
@@ -422,11 +406,11 @@ h3 {
 }
 
 .visual-backdrop--electronics::before {
-  background-image: url('/retail-electronics-bg.png');
+  background-image: url("/retail-electronics-bg.png");
 }
 
 .visual-backdrop--mixed::before {
-  background-image: url('/retail-mixed-bg.png');
+  background-image: url("/retail-mixed-bg.png");
 }
 
 .section-heading {
@@ -464,7 +448,7 @@ h3 {
   font-weight: 800;
 }
 
-.tab-button[aria-selected='true'] {
+.tab-button[aria-selected="true"] {
   border-color: var(--green);
   color: #fff;
   background: var(--green);
@@ -546,12 +530,16 @@ h3 {
 .product-visual--placeholder {
   background:
     linear-gradient(135deg, rgba(255, 214, 0, 0.22), transparent 48%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(246, 247, 242, 0.88)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.78),
+      rgba(246, 247, 242, 0.88)
+    ),
     #f8f7ef;
 }
 
 .product-visual--placeholder::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 18px;
   right: 20px;
@@ -562,7 +550,7 @@ h3 {
 }
 
 .product-visual--placeholder::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 18px;
   left: 22px;
@@ -834,7 +822,7 @@ h3 {
 }
 
 .product-detail-list li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0.62em;
   left: 0;
@@ -957,8 +945,7 @@ h3 {
   padding: clamp(42px, 6vw, 70px) clamp(20px, 5vw, 72px);
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(255, 214, 0, 0.12), transparent 34%),
-    #101820;
+    linear-gradient(135deg, rgba(255, 214, 0, 0.12), transparent 34%), #101820;
 }
 
 .cta-section h2 {
@@ -993,8 +980,8 @@ h3 {
   width: 19px;
   height: 19px;
   background: rgba(255, 255, 255, 0.72);
-  -webkit-mask: url('/icons/phone.svg') center / contain no-repeat;
-  mask: url('/icons/phone.svg') center / contain no-repeat;
+  -webkit-mask: url("/icons/phone.svg") center / contain no-repeat;
+  mask: url("/icons/phone.svg") center / contain no-repeat;
 }
 
 .cta-call-button:hover {
@@ -1141,8 +1128,7 @@ h3 {
   padding: clamp(42px, 6vw, 70px) clamp(20px, 5vw, 72px);
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(255, 214, 0, 0.12), transparent 34%),
-    #101820;
+    linear-gradient(135deg, rgba(255, 214, 0, 0.12), transparent 34%), #101820;
 }
 
 .contact-section-dark .contact-card {
@@ -1203,8 +1189,8 @@ h3 {
   width: 19px;
   height: 19px;
   background: rgba(255, 255, 255, 0.78);
-  -webkit-mask: url('/icons/phone.svg') center / contain no-repeat;
-  mask: url('/icons/phone.svg') center / contain no-repeat;
+  -webkit-mask: url("/icons/phone.svg") center / contain no-repeat;
+  mask: url("/icons/phone.svg") center / contain no-repeat;
 }
 
 .contact-action-button--call:hover,
@@ -1249,7 +1235,7 @@ h3 {
   }
 
   .mobile-nav::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 5px;
     bottom: 5px;
@@ -1359,7 +1345,7 @@ h3 {
   }
 
   .phone-link::before {
-    content: '📞';
+    content: "📞";
     color: #fff;
     font-size: 15px;
     line-height: 1;

@@ -1,22 +1,25 @@
 const contactLinks = [
   {
-    label: 'Telegram',
-    className: 'contact-icon contact-icon--telegram',
+    label: "Telegram",
+    className: "contact-icon contact-icon--telegram",
+    icon: "/icons/telegram.svg",
   },
   {
-    label: 'WhatsApp',
-    className: 'contact-icon contact-icon--whatsapp',
+    label: "WhatsApp",
+    className: "contact-icon contact-icon--whatsapp",
+    icon: "/icons/whatsapp.svg",
   },
   {
-    label: 'MAX',
-    className: 'contact-icon contact-icon--max',
-    icon: '/icons/max-messenger-sign-logo.svg',
+    label: "MAX",
+    className: "contact-icon contact-icon--max",
+    icon: "/icons/max.svg",
   },
   {
-    label: 'Почта',
-    className: 'contact-icon contact-icon--mail',
+    label: "Почта",
+    className: "contact-icon contact-icon--mail",
+    icon: "/icons/email.svg",
   },
-]
+];
 
 export function ContactLinks() {
   return (

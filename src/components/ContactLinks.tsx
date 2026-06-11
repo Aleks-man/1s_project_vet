@@ -1,31 +1,31 @@
-import { company } from "../data/site";
+import { company } from '../data/site'
 
 const contactLinks = [
   {
-    label: "Telegram",
-    className: "contact-icon contact-icon--telegram",
-    icon: "/icons/telegram.svg",
+    label: 'Telegram',
+    className: 'contact-icon contact-icon--telegram',
+    icon: '/icons/telegram.svg',
     href: company.telegramHref,
   },
   {
-    label: "WhatsApp",
-    className: "contact-icon contact-icon--whatsapp",
-    icon: "/icons/whatsapp.svg",
+    label: 'WhatsApp',
+    className: 'contact-icon contact-icon--whatsapp',
+    icon: '/icons/whatsapp.svg',
     href: company.whatsappHref,
   },
   {
-    label: "MAX",
-    className: "contact-icon contact-icon--max",
-    icon: "/icons/max.svg",
+    label: 'MAX',
+    className: 'contact-icon contact-icon--max',
+    icon: '/icons/max.svg',
     href: company.maxHref,
   },
   {
-    label: "Почта",
-    className: "contact-icon contact-icon--mail",
-    icon: "/icons/email.svg",
+    label: 'Почта',
+    className: 'contact-icon contact-icon--mail',
+    icon: '/icons/email.svg',
     href: company.emailHref,
   },
-];
+]
 
 export function ContactLinks() {
   return (

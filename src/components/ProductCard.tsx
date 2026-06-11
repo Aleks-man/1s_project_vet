@@ -1,9 +1,17 @@
 import type { KeyboardEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import type { Product } from '../data/products'
+import type { Product, ProductCategory } from '../data/products'
 
 type ProductCardProps = {
   product: Product
+}
+
+const categoryLabels: Record<ProductCategory, string> = {
+  accounting: 'Учет',
+  trade: 'Торговля',
+  management: 'Бизнес',
+  hr: 'Кадры',
+  workflow: 'Документы',
 }
 
 export function ProductCard({ product }: ProductCardProps) {
@@ -15,10 +23,11 @@ export function ProductCard({ product }: ProductCardProps) {
   }
 
   const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
-    if (event.target !== event.currentTarget || event.key !== 'Enter') {
+    if (event.target !== event.currentTarget || !['Enter', ' '].includes(event.key)) {
       return
     }
 
+    event.preventDefault()
     openProductPage()
   }
 
@@ -40,15 +49,7 @@ export function ProductCard({ product }: ProductCardProps) {
               <img src="/logo-1c.svg" alt="" />
             </span>
             <span className="product-placeholder-category">
-              {product.category === 'accounting'
-                ? 'Учет'
-                : product.category === 'trade'
-                  ? 'Торговля'
-                  : product.category === 'hr'
-                    ? 'Кадры'
-                    : product.category === 'workflow'
-                      ? 'Документы'
-                      : 'Бизнес'}
+              {categoryLabels[product.category]}
             </span>
           </div>
         )}

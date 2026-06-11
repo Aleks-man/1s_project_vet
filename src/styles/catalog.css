@@ -52,14 +52,10 @@
 }
 
 .product-card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: #fff;
-}
-
-.product-card {
   display: grid;
   min-height: 330px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   padding: 18px;
   background: #fff;
   cursor: pointer;

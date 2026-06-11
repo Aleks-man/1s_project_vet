@@ -1,0 +1,243 @@
+﻿.section-heading {
+  display: grid;
+  max-width: 760px;
+  gap: 4px;
+  margin-bottom: 26px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.catalog-tabs {
+  display: grid;
+  gap: 24px;
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tab-button {
+  min-height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 16px;
+  color: var(--muted);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.tab-button[aria-selected="true"] {
+  border-color: var(--green);
+  color: #fff;
+  background: var(--green);
+}
+
+.tab-summary {
+  display: grid;
+  max-width: 740px;
+  gap: 4px;
+  color: var(--muted);
+}
+
+.tab-summary strong {
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.product-card,
+.service-list article {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.product-card {
+  display: grid;
+  min-height: 330px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.05);
+}
+
+.product-card small {
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.product-tags span {
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--green);
+  background: rgba(36, 161, 72, 0.1);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.product-card p,
+.service-list p,
+.cta-section p {
+  color: var(--muted);
+}
+
+.product-visual {
+  position: relative;
+  display: grid;
+  min-height: 176px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-visual--image {
+  min-height: 164px;
+  margin: -2px 0 14px;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.product-visual--placeholder {
+  background:
+    linear-gradient(135deg, rgba(255, 214, 0, 0.22), transparent 48%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.78),
+      rgba(246, 247, 242, 0.88)
+    ),
+    #f8f7ef;
+}
+
+.product-visual--placeholder::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(22, 128, 58, 0.08);
+}
+
+.product-visual--placeholder::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  width: 74px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--yellow), rgba(218, 41, 28, 0.72));
+}
+
+.product-image {
+  position: relative;
+  z-index: 1;
+  width: min(188px, 92%);
+  max-height: 164px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(17, 24, 39, 0.13));
+}
+
+.product-placeholder {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.product-placeholder-logo {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.08);
+  overflow: hidden;
+}
+
+.product-placeholder-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-placeholder-category {
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: var(--green);
+  background: rgba(22, 128, 58, 0.1);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.product-footer {
+  display: grid;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.product-footer strong {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.product-card-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+.product-details-button {
+  justify-self: end;
+}
+
+.product-card-actions a,
+.product-card-actions button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.product-order-link {
+  color: var(--ink);
+  background: transparent;
+}
+
+.product-details-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #28764a;
+  border-radius: 999px;
+  padding: 0 18px;
+}
+
+.product-order-link:hover,
+.product-order-link:focus-visible {
+  color: var(--red);
+}
+

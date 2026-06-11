@@ -104,7 +104,6 @@
   }
 
   .feature-grid,
-  .contact-layout,
   .product-info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -291,8 +290,7 @@
   .product-grid,
   .partner-strip,
   .industry-grid,
-  .feature-grid,
-  .contact-layout,
+    .feature-grid,
   .product-info-grid,
   .related-product-grid,
   .cta-section {

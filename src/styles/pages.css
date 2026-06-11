@@ -19,8 +19,7 @@
   font-size: 20px;
 }
 
-.feature-grid,
-.contact-layout {
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;

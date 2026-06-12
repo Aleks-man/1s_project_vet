@@ -267,7 +267,6 @@
   }
 
   .product-card:hover h3 {
-    text-decoration-color: rgba(36, 161, 72, 0.38);
+    text-decoration-color: rgba(154, 155, 154, 0.72);
   }
 }
-

@@ -70,6 +70,7 @@
 
 .visual-backdrop--product-catalog::before {
   background-position: center top;
+  background-repeat: repeat-y;
   background-size: max(1280px, 100vw) auto;
 }
 

@@ -68,6 +68,11 @@
   background-image: url("/retail-grocery-bg.png");
 }
 
+.visual-backdrop--product-catalog::before {
+  background-position: center top;
+  background-size: max(1280px, 100vw) auto;
+}
+
 .visual-backdrop--hero::before {
   background-image: url("/hero-commerce-bg.png");
 }

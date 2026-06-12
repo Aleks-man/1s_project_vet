@@ -249,7 +249,8 @@
 @media (hover: hover) and (pointer: fine) {
   .product-card:hover {
     border-color: rgba(22, 128, 58, 0.34);
-    box-shadow: 0 34px 92px rgba(17, 24, 39, 0.24);
+    background: #faf8f2;
+    box-shadow: 7px 9px 18px -8px rgba(17, 24, 39, 0.28);
   }
 
   .product-card:hover .product-image {

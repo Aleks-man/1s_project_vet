@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, MemoryRouter, Route, Routes } from 'react-router-dom'
 import { CallbackModal } from './components/CallbackModal'
 import { Header } from './components/Header'
 import { ScrollToTop } from './components/ScrollToTop'
@@ -10,11 +10,16 @@ import { ProductPage } from './pages/ProductPage'
 import { ServicesPage } from './pages/ServicesPage'
 import './App.css'
 
-function App() {
+type AppProps = {
+  router?: 'browser' | 'memory'
+  location?: string
+}
+
+function AppShell() {
   const [isCallbackOpen, setIsCallbackOpen] = useState(false)
 
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -25,6 +30,22 @@ function App() {
         <Route path="/contacts" element={<ContactsPage onCallbackRequest={() => setIsCallbackOpen(true)} />} />
       </Routes>
       <CallbackModal isOpen={isCallbackOpen} onClose={() => setIsCallbackOpen(false)} />
+    </>
+  )
+}
+
+function App({ router = 'browser', location = '/' }: AppProps) {
+  if (router === 'memory') {
+    return (
+      <MemoryRouter initialEntries={[location]}>
+        <AppShell />
+      </MemoryRouter>
+    )
+  }
+
+  return (
+    <BrowserRouter>
+      <AppShell />
     </BrowserRouter>
   )
 }
